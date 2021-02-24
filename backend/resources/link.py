@@ -1,4 +1,4 @@
-# Import flask
+#Import flask
 from flask import redirect, jsonify, request
 from flask_restful import Resource
 from backend.database.models import Link
@@ -35,8 +35,8 @@ class LinkAPI(Resource):
             return "Link not found", 400
 
     def post(self):
-        request_data = request.get_json()
-        original_link = request_data["original_link"]
+        request_data=request.get_json()
+        original_link=request_data["original_link"]
         if "expire_at" in request_data:
             # add validation for date format later
             expire_at = request_data["expire_at"].replace("/", "-")
