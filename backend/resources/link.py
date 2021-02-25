@@ -1,4 +1,4 @@
-#Import flask
+#mport flask
 from flask import redirect, jsonify, request
 from flask_restful import Resource
 from backend.database.models import Link
@@ -57,8 +57,8 @@ class LinkAPI(Resource):
         try:
             if "http://" not in original_link and "https://" not in original_link:
                 original_link = "http://" + original_link
-            link_id = self.short_link_generator(original_link)
-            short_link = WEBSITE_URL + link_id
+            link_id=self.short_link_generator(original_link)
+            short_link=WEBSITE_URL + link_id
             data = {
                 "original_link": original_link,
                 "expire_at": expire_at,
