@@ -112,3 +112,12 @@ class LinkAPI(Resource):
             ret.append(characters[val])
             index = index // base
         return "".join(ret[::-1])
+
+    def testformat          (self, a):
+        return
+
+    def testformat2(self, b):
+        return b
+
+    def      f (     a)  :
+        return
