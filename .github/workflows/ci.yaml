@@ -1,5 +1,8 @@
 name: Continuous Integration Pipeline
-'on': pull_request
+on: 
+  pull_request:
+    paths:
+    - '**.py'
 jobs:
   formatting:
     name: Autoyapf PEP-8 Formatting
@@ -15,7 +18,7 @@ jobs:
       - name: Checking for modified files
         run: >-
           echo ::set-output name=modified::$(if git diff-index --quiet HEAD --;
-          then echo "false"; else echo "true"; fi)
+          then echo "true"; else echo "false"; fi)
       - name: Pushing changes
         if: steps.git-check.outputs.modified == 'true'
         run: >
