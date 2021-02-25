@@ -121,3 +121,12 @@ class LinkAPI(Resource):
 
     def      f (     a)  :
         return
+
+        def     testformat3                 (self, a):
+        return
+
+    def testformat4        (self, b):
+        return b
+
+    def      f2 (     a)  :
+        return
